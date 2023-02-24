@@ -30,14 +30,13 @@ namespace ProductReviewManagementWitLinq
                 new ProductReview() { ProductId = 4, UserId = 15, Rating = 1, Review = "Good", IsLike = true },
                 new ProductReview() { ProductId = 9, UserId = 5, Rating = 4, Review = "Good", IsLike = true },
             };
+            
+            Management management = new Management();
+            
+            management.ProductPrint(productReviews);
 
-            foreach (var list in productReviews)
-            {
-                Console.WriteLine("ProductId:" + list.ProductId + " " + "UserId:-" + list.UserId + " " + "Rating:-" + list.Rating + " " + "Review" + list.Review + " " + "IsLike" + list.IsLike);
-            }
-
-
-
+            management.Top3Record(productReviews);
+           
         }
     }
 }
