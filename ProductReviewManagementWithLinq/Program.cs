@@ -32,7 +32,7 @@ namespace ProductReviewManagementWitLinq
             };
             
             Management management = new Management();
-            
+
             //management.ProductPrint(productReviews);
 
             //management.Top3Record(productReviews);
@@ -43,7 +43,9 @@ namespace ProductReviewManagementWitLinq
 
             //management.retriveOnlyProductId(productReviews);
 
-            management.skipRecords(productReviews);
+            // management.skipRecords(productReviews);
+
+            management.retriveOnlyProductIdBySelect(productReviews);
         }
     }
 }
