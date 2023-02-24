@@ -58,6 +58,17 @@ namespace ProductReviewManagementWithLinq
                 Console.WriteLine("ProductId:-" + list.productId + " = " + list.count);
             }
         }
+        //UseCase5
+        public void retriveOnlyProductId(List<ProductReview> listproductReviews)
+        {
+            Console.WriteLine("----Retrieve only productId and review from the list----");
+            var recordData = listproductReviews.Select(x => x.ProductId).ToList();
+            foreach (var list in recordData)
+            {
+                Console.WriteLine("ProductId:-" + list);
+            }
+
+        }
 
 
     }

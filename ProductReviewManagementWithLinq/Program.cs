@@ -33,13 +33,15 @@ namespace ProductReviewManagementWitLinq
             
             Management management = new Management();
             
-            management.ProductPrint(productReviews);
+            //management.ProductPrint(productReviews);
 
-            management.Top3Record(productReviews);
+            //management.Top3Record(productReviews);
 
-            management.selectedRecords(productReviews);
+            //management.selectedRecords(productReviews);
 
-            management.countedRecords(productReviews);
+            //management.countedRecords(productReviews);
+
+            management.retriveOnlyProductId(productReviews);
         }
     }
 }
