@@ -41,7 +41,9 @@ namespace ProductReviewManagementWitLinq
 
             //management.countedRecords(productReviews);
 
-            management.retriveOnlyProductId(productReviews);
+            //management.retriveOnlyProductId(productReviews);
+
+            management.skipRecords(productReviews);
         }
     }
 }
