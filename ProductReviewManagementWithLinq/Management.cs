@@ -20,7 +20,7 @@ namespace ProductReviewManagementWithLinq
         //UseCase2
         public void Top3Record(List<ProductReview> listproductReviews)
         {
-            Console.WriteLine("Dispalying Top Three Records");
+            Console.WriteLine("----Dispalying Top Three Records----");
 
             var recordData = (from ProductReview in listproductReviews
                               orderby ProductReview.Rating descending
@@ -31,6 +31,21 @@ namespace ProductReviewManagementWithLinq
                 Console.WriteLine("ProductId:-" + list.ProductId + " " + "UserID:-" + list.UserId + " " + "Rating:-" + list.Rating);
             }
 
+        }
+        //UseCase3
+        public void selectedRecords(List<ProductReview> listproductReviews)
+        {
+            Console.WriteLine("----Retrieve who’s rating are greater then 3----");
+            var recordData = (from ProductReview in listproductReviews
+                              where (ProductReview.ProductId == 1 || ProductReview.ProductId == 4 || ProductReview.ProductId == 9)
+                              && ProductReview.Rating > 3
+                              select ProductReview
+                               );
+
+            foreach (var list in recordData)
+            {
+                Console.WriteLine("ProductId:-" + list.ProductId + " " + "UserID:-" + list.UserId + " " + "Rating:-" + list.Rating + " " + "Review:-" + list.Review + " " + "IsLike:-" + list.IsLike);
+            }
         }
 
     }

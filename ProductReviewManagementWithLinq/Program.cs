@@ -36,7 +36,8 @@ namespace ProductReviewManagementWitLinq
             management.ProductPrint(productReviews);
 
             management.Top3Record(productReviews);
-           
+
+            management.selectedRecords(productReviews);
         }
     }
 }
